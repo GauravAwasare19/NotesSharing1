@@ -1,0 +1,55 @@
+
+  .gradientColor {
+    height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    background: linear-gradient(-45deg, #05995c, #950a3f, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    justify-content: center;
+    animation: gradient 8s ease infinite;
+    font-family: roboto;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+  }
+  .card{
+    background-color: transparent;
+    border: 0;
+  }
+  @keyframes gradient {
+    0% {
+      background-position: 0% 5%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+.cont1{
+    
+    height: 100%;
+    display: grid;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    grid-template-columns: repeat(2 ,1fr);
+    grid-template-rows: 1;
+    grid-template-areas: "a b";
+
+}
+.cont2{
+    grid-area: a;
+}
+.cont3{
+    grid-area: b;
+}
+
+ hr{
+  color: white;
+  background: white;
+ }
+ 
