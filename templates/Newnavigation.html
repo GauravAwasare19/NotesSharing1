@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Note Sharing Site</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="{% static 'css/mystyle.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/nav.css' %}" />
+  </head>
+  <body>
+    <!-- <nav
+      class="navbar navbar-expand-sm justify-content-center"
+      style="background-color: lightblue"
+    >
+      <ul class="navbar-nav">
+        <li class="navbar-it">
+          <a class="nav-link" href="">HOME</a>
+        </li>
+        <li class="navbar-it">
+          <a class="nav-link" href="">ABOUT</a>
+        </li>
+        <li class="navbar-it">
+          <a class="nav-link" href="">CONTACT</a>
+        </li>
+        <li class="navbar-it">
+          <a class="nav-link" href="">LOGIN</a>
+        </li>
+        <li class="navbar-it">
+          <a class="nav-link" href="">ADMIN LOGIN</a>
+        </li>
+      </ul>
+    </nav> -->
+    <nav class="navbar navbar-expand-sm " id="navigation" >
+      <ul class="navbar-nav" id="nav1">
+          <li class="navbar-it">
+              <a class="nav-link" href="{% url 'index' %}">
+                  <span class="icon">
+                    <i class="fa-solid fa-house-chimney"></i>
+                  </span>
+                  <span class="text">HOME</span>
+              </a>     
+          </li>
+          <li class="navbar-it">
+              <a class="nav-link" href="{% url 'about' %}">
+                  <span class="icon"><i class="fa-solid fa-address-card"></i></span>
+        <span class="text">ABOUT</span>
+              </a>
+          </li>
+          <li class="navbar-it">
+              <a class="nav-link" href="{% url 'contact' %}">
+                <span class="icon">
+                    <i class="fa-solid fa-phone"></i>
+            </span>
+                  <span class="text">CONTACT</span></a>
+          </li>
+          <li class="navbar-it">
+              <a class="nav-link" href="{% url 'userlogin' %}"><span class="icon">
+                <i class="fa-solid fa-right-to-bracket"></i></span>
+                  <span class="text">LOGIN</span></a>
+          </li>
+          <li class="navbar-it">
+              <a class="nav-link" href="{% url 'login_admin' %}">       <span class="icon">
+                <i class="fa-solid fa-toolbox"></i></span>
+                  <span class="text">ADMIN</span></a>
+          </li>
+      </ul>
+      <h3 class="h3" id="navlogo"><span id="span"><img  class="logo" src="{% static 'images/letter.png' %}" alt="">otes</span></h3>
+  </nav>
+
+
+    {% block start %} 
+    
+    {% endblock %}
+
+    <script src="https://kit.fontawesome.com/5b4555172b.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </body>
+</html>
